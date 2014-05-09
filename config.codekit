@@ -22,6 +22,50 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/icons\/advocacy.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2297,
+		"inputAbbreviatedPath": "\/img\/icons\/advocacy.png",
+		"outputAbbreviatedPath": "\/img\/icons\/advocacy.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/ag.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2467,
+		"inputAbbreviatedPath": "\/img\/icons\/ag.png",
+		"outputAbbreviatedPath": "\/img\/icons\/ag.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/environment.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2866,
+		"inputAbbreviatedPath": "\/img\/icons\/environment.png",
+		"outputAbbreviatedPath": "\/img\/icons\/environment.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/hunger.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5084,
+		"inputAbbreviatedPath": "\/img\/icons\/hunger.png",
+		"outputAbbreviatedPath": "\/img\/icons\/hunger.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/icons\/water.png": {
 		"fileType": 32768,
 		"ignore": 0,
