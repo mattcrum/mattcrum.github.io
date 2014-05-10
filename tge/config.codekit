@@ -143,6 +143,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/icons\/logo-white.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3299,
+		"inputAbbreviatedPath": "\/img\/icons\/logo-white.png",
+		"outputAbbreviatedPath": "\/img\/icons\/logo-white.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/icons\/water.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -172,6 +183,17 @@
 		"initialSize": 53529,
 		"inputAbbreviatedPath": "\/img\/logo-red.png",
 		"outputAbbreviatedPath": "\/img\/logo-red.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/logo-white.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3299,
+		"inputAbbreviatedPath": "\/img\/logo-white.png",
+		"outputAbbreviatedPath": "\/img\/logo-white.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
