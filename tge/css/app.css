@@ -265,10 +265,10 @@ header.navigation {
     float: left;
     max-height: 80px;
     padding-left: 1em;
-    padding-right: 2em; }
+    padding-right: 1em; }
     header.navigation .logo img {
       max-height: 80px;
-      padding: 1.4em 0; }
+      padding: 1.4em 0 0 0; }
   header.navigation .navigation-menu-button {
     color: rgba(25, 41, 48, 0.7);
     cursor: pointer;
@@ -305,7 +305,7 @@ header.navigation {
   header.navigation ul li {
     background: white;
     display: block;
-    line-height: 80px;
+    line-height: 40px;
     overflow: hidden;
     padding-right: .8em;
     text-align: right;
@@ -442,7 +442,7 @@ header.navigation {
           padding-bottom: 3px; }
 
 .hero {
-  background: url(/img/herocomp.png);
+  background: url(http://mattcrum.github.io/tge/img/herocomp.png);
   background-color: #00bef9;
   background-repeat: no-repeat;
   background-position: top;
@@ -687,6 +687,13 @@ header.navigation {
     background-color: #f7f7f7; }
     .card:active .card-header {
       background-color: #f7f7f7; }
+
+.grid-wrapper {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 9999; }
 
 .grid-items:after {
   content: "";

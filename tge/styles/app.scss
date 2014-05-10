@@ -41,11 +41,11 @@ header.navigation {
     float: left;    
     max-height: $navigation-height;
     padding-left: 1em;
-    padding-right: 2em;
+    padding-right: 1em;
 
     img {
       max-height: $navigation-height;
-      padding: 1.4em 0;
+      padding: 1.4em 0 0 0;
     }
   }
 
@@ -101,7 +101,7 @@ header.navigation {
   ul li {
     background: $navigation-background;
     display: block;
-    line-height: $navigation-height;
+    line-height: 40px;//$navigation-height;
     overflow: hidden;
     padding-right: .8em;
     text-align: right;
@@ -214,7 +214,7 @@ header.navigation {
   $hero-color: white;
 
 //  background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
-  background: url(/img/herocomp.png);
+  background: url(http://mattcrum.github.io/tge/img/herocomp.png);
   
   background-color: $tge-blue;
   background-repeat: no-repeat;
@@ -490,6 +490,13 @@ header.navigation {
   width: (100% / 12) * $columns;
 }
 
+.grid-wrapper {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 9999; 
+}
 .grid-items {
   $grid-items-background: $base-body-color;
   $grid-item-background: desaturate($base-accent-color, 30); 

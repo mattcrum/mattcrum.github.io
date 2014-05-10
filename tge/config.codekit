@@ -33,6 +33,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/connect.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3455,
+		"inputAbbreviatedPath": "\/img\/connect.png",
+		"outputAbbreviatedPath": "\/img\/connect.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/downarrow.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 175,
+		"inputAbbreviatedPath": "\/img\/downarrow.png",
+		"outputAbbreviatedPath": "\/img\/downarrow.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/Fill 6.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -106,6 +128,17 @@
 		"initialSize": 5084,
 		"inputAbbreviatedPath": "\/img\/icons\/hunger.png",
 		"outputAbbreviatedPath": "\/img\/icons\/hunger.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/logo-red.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4478,
+		"inputAbbreviatedPath": "\/img\/icons\/logo-red.png",
+		"outputAbbreviatedPath": "\/img\/icons\/logo-red.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
