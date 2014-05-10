@@ -122,13 +122,14 @@ header.navigation {
       color: $navigation-color;
 
       &:hover {
-        color: $navigation-color-hover;
+        color: lighten($navigation-color,20%);
+      }
+      .red-text{
+        color: $tge-red; 
       }
     }
     
-    a.red-text{
-     color:red !important; 
-    }
+    
   }
 
   .sign-up {
@@ -213,7 +214,7 @@ header.navigation {
   $hero-color: white;
 
 //  background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
-  background: url(/img/kidinblue.png);
+  background: url(/img/herocomp.png);
   
   background-color: $tge-blue;
   background-repeat: no-repeat;
@@ -235,7 +236,7 @@ header.navigation {
     color: $hero-color;
 
     button {
-      @include button(simple, $base-accent-color);
+      @include button(pill, $tge-yellow);
       font-size: $base-font-size;
       outline: none;
     }
