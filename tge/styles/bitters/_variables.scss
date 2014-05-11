@@ -1,7 +1,7 @@
 // Typography
 ///////////////////////////////////////////////////////////////////////////////
-$sans-serif: $helvetica;
-$serif: $georgia;
+$sans-serif: $open-sans;//$helvetica;
+$serif:  $lusitana;;
 
 $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
@@ -33,11 +33,11 @@ $tge-yellow: #FFD100;
 $base-body-color: white;
 
 //  Font Colors
-$base-font-color: $dark-gray;
+$base-font-color: $tge-dark-gray;
 $base-accent-color: $blue;
 
 //  Text Link Colors
-$base-link-color: $base-accent-color;
+$base-link-color: $tge-dark-gray;
 $hover-link-color: darken($base-accent-color, 15);
 
 // Border color

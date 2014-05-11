@@ -1,0 +1,13 @@
+.left-container {
+   @include span-columns(9);
+  @include media($tablet) {
+   @include span-columns(8); 
+ }
+}
+
+.right-container {
+  @include span-columns(3);
+  @include media($tablet) {
+   @include span-columns(8); 
+ }
+}
