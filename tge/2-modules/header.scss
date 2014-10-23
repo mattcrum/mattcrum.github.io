@@ -19,6 +19,7 @@ header.navigation {
 
   .menu-wrapper {
     @include outer-container;
+    @include clearfix;
     position: relative;
     z-index: 9999;
   }
@@ -85,7 +86,7 @@ header.navigation {
   }
 
   ul li {
-    background: $navigation-background;
+    background: $navigation-background !important;
     display: block;
     line-height: 40px;//$navigation-height;
     overflow: hidden;

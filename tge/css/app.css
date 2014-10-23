@@ -338,6 +338,10 @@ header.navigation {
       content: "";
       display: table;
       clear: both; }
+    header.navigation .menu-wrapper:after {
+      content: "";
+      display: table;
+      clear: both; }
   header.navigation .logo {
     float: left;
     max-height: 80px;
@@ -380,7 +384,7 @@ header.navigation {
         margin: 0;
         padding: 0; } }
   header.navigation ul li {
-    background: white;
+    background: white !important;
     display: block;
     line-height: 40px;
     overflow: hidden;
@@ -976,7 +980,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  z-index: 9999;
   padding: 1em;
   max-width: 68em;
   margin-left: auto;

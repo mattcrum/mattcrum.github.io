@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <header class="navigation">
+    <div class="menu-wrapper">
+      <a href="javascript:void(0)" class="logo">
+        <img src="img/logo-red.png" alt="">
+      </a>
+      <p class="navigation-menu-button" id="js-mobile-menu">
+        <img src="img/downarrow.png">
+      </p>
+      <div class="nav">
+        <ul id="navigation-menu">
+          <li><a href="javascript:void(0)">ABOUT</a>
+          </li>
+          <li><a href="javascript:void(0)">PROJECTS</a>
+          </li>
+          <li><a href="javascript:void(0)">ORGANIZATIONS</a>
+          </li>
+          <li><a href="javascript:void(0)">BLOG</a>
+          </li>
+          <li><a href="javascript:void(0)">FAQ</a>
+          </li>
+          <li><a href="javascript:void(0)"><span class="red-text">LOGIN</span></a>
+          </li>
+          <li><a href="javascript:void(0)"><span class="red-text">SIGN UP</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="body-wrapper">
+    <div class="left-container">
+      <table>
+        <tr>
+          <td>Test content</td>
+        </tr>
+        <tr>
+          <td>Quorum hic incurreret ea aute. Aute laborum non veniam quae. Noster iis ubi enim 
+            expetendis si de esse excepteur efflorescere, varias qui aliquip ut culpa te 
+            sint commodo cohaerescant. Ut ex voluptatibus. Litteris praetermissum et 
+            ullamco, in quae irure iis ingeniis. Sed a veniam possumus de incurreret do 
+            pariatur sed laborum hic esse consequat, pariatur enim velit cernantur quid ab 
+            ad esse firmissimum in e dolor incurreret graviterque, si sint voluptate 
+            despicationes sed iis ad illum fugiat summis. Magna probant pariatur o non culpa 
+            incurreret eruditionem.</td>
+        </tr>
+        <tr>
+          <td>Ipsum senserit id arbitrantur. Qui ubi legam doctrina, eu amet expetendis 
+            consequat, legam consequat te eruditionem ita cillum aliquip senserit. Irure e 
+            consequat nam tamen qui mentitum lorem irure appellat anim. Magna qui occaecat 
+            an multos. Dolor occaecat consequat se singulis labore multos incididunt varias. 
+            Multos incurreret nam legam irure qui quid ubi ingeniis. Officia an quid. Quae 
+            eiusmod ab proident.</td>
+        </tr>
+      </table>  
+    </div>
+  <div class="right-container">
+    
+    -Recent articles
+    <br />
+    -Latest updated projects
+    <br />
+    -Social Media
+
+    </div>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="img/logo-white.png" alt="">
+    </div>
+    <div class="footer-links">
+      <ul>
+        <li>
+          <h3>Content</h3>
+        </li>
+        <li><a href="javascript:void(0)">About</a>
+        </li>
+        <li><a href="javascript:void(0)">Contact</a>
+        </li>
+        <li><a href="javascript:void(0)">Products</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <h3>Follow Us</h3>
+        </li>
+        <li><a href="javascript:void(0)">Facebook</a>
+        </li>
+        <li><a href="javascript:void(0)">Twitter</a>
+        </li>
+        <li><a href="javascript:void(0)">YouTube</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <h3>Legal</h3>
+        </li>
+        <li><a href="javascript:void(0)">Terms and Conditions</a>
+        </li>
+        <li><a href="javascript:void(0)">Privacy Policy</a>
+        </li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <p>Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.</p>
+  </footer>
+
+  <!--SCRIPTS -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.accordion-tabs-minimal').each(function (index) {
+        $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
+      });
+
+      $('.accordion-tabs-minimal').on('click', 'li > a', function (event) {
+        if (!$(this).hasClass('is-active')) {
+          event.preventDefault();
+          var accordionTabs = $(this).closest('.accordion-tabs-minimal')
+          accordionTabs.find('.is-open').removeClass('is-open').hide();
+
+          $(this).next().toggleClass('is-open').toggle();
+          accordionTabs.find('.is-active').removeClass('is-active');
+          $(this).addClass('is-active');
+        } else {
+          event.preventDefault();
+        }
+      });
+    });
+  </script>
+  <script>
+    $(function () {
+      var menu = $('#navigation-menu');
+      var menuToggle = $('#js-mobile-menu');
+
+      $(menuToggle).on('click', function (e) {
+        e.preventDefault();
+        menu.slideToggle(function () {
+          if (menu.is(':hidden')) {
+            menu.removeAttr('style');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

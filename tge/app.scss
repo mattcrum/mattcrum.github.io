@@ -1,12 +1,17 @@
-@import "bourbon/bourbon";
-@import "bitters/bitters";
-@import "grid-settings";
-@import "neat/neat";
-@import "article";
-@import "header";
-@import "grid-items";
-@import "footer";
-@import "subpage";
+@import "0-plugins/plugins-dir";
+@import "1-base/base-dir";
+@import "2-modules/modules-dir";
+@import "3-layouts/layouts-dir";
+
+//@import "bourbon/bourbon";
+//@import "bitters/bitters";
+//@import "grid-settings";
+//@import "neat/neat";
+//@import "article";
+//@import "header";
+//@import "grid-items";
+//@import "footer";
+//@import "subpage";
 
 $font-stack:    "Open Sans Light", Helvetica, sans-serif;
 $primary-color: #333;
@@ -22,7 +27,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  z-index: 9999; 
   padding: 1em;
   @include outer-container;
 }
