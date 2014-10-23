@@ -3,7 +3,7 @@ article.type-system-serif {
   $serif-2: 'Merriweather', serif !global;
   $sans-serif: 'Merriweather Sans', sans-serif !global;
 
-  @include clearfix;
+  //@include clearfix;
   text-align: left;
 
   .type {

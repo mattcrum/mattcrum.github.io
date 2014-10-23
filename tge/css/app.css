@@ -1,3 +1,101 @@
+/**
+ * Returns a media context (media query / grid context) that can be stored in a variable and passed to `media()` as a single-keyword argument. Media contexts defined using `new-breakpoint` are used by the visual grid, as long as they are defined before importing Neat.
+ *
+ * @param {List} $query
+ *   - A list of media query features and values. Each `$feature` should have a corresponding `$value`. If there is only a single `$value` in `$query`, `$default-feature` is going to be used. The number of total columns in the grid can be set by passing `$columns` at the end of the list (overrides `$total-columns`). For a list of valid values for `$feature`, click [here](http://www.w3.org/TR/css3-mediaqueries/#media1).
+ *
+ * @param {Number (unitless)} $total-columns ($grid-columns)
+ *   - Number of columns to use in the new grid context. Can be set as a shorthand in the first parameter.
+ *
+ * @example scss - Usage
+ *   $mobile: new-breakpoint(max-width 480px 4);
+ *
+ *   .element {
+ *     @include media($mobile) {
+ *       @include span-columns(4);
+ *     }
+ *   }
+ *
+ * @example css - CSS Output
+ *   @media screen and (max-width: 480px) {
+ *     .element {
+ *       display: block;
+ *       float: left;
+ *       margin-right: 7.42297%;
+ *       width: 100%;
+ *     }
+ *     .element:last-child {
+ *       margin-right: 0;
+ *     }
+ *   }
+ */
+/**
+ * Sets the relative width of a single grid column. The unit used should be the same one used to define `$gutter`. To learn more about golden-ratio() see [Bourbon docs](http://bourbon.io/docs/#golden-ratio). Set with a `!global` flag.
+ *
+ * @type Number (Unit)
+ */
+/**
+ * Sets the relative width of a single grid gutter. The unit used should be the same one used to define `$column`. To learn more about golden-ratio() see [Bourbon docs](http://bourbon.io/docs/#golden-ratio). Set with the `!global` flag.
+ *
+ * @type Number (Unit)
+ */
+/**
+ * Sets the total number of columns in the grid. Its value can be overridden inside a media query using the `media()` mixin. Set with the `!global` flag.
+ *
+ * @type Number (Unitless)
+ */
+/**
+ * Sets the max-width property of the element that includes `outer-container()`. To learn more about `em()` see [Bourbon docs](http://bourbon.io/docs/#px-to-em). Set with the `!global` flag.
+ *
+ * @type Number (Unit)
+ */
+/**
+ * When set to true, it sets the box-sizing property of all elements to `border-box`. Set with a `!global` flag.
+ *
+ * @type Bool
+ *
+ * @example css - CSS Output
+ *   * {
+ *     -webkit-box-sizing: border-box;
+ *     -moz-box-sizing: border-box;
+ *     box-sizing: border-box;
+ *   }
+ */
+/**
+ * Sets the default [media feature](http://www.w3.org/TR/css3-mediaqueries/#media) that `media()` and `new-breakpoint()` revert to when only a breakpoint value is passed. Set with a `!global` flag.
+ *
+ * @type String
+ */
+/**
+ * Sets the default layout direction of the grid. Can be `LTR` or `RTL`. Set with a `!global` flag.
+ *
+ * @type String
+ */
+/**
+ * Displays the visual grid when set to true. The overlaid grid may be few pixels off depending on the browser's rendering engine and pixel rounding algorithm. Set with the `!global` flag.
+ *
+ * @type Bool
+ */
+/**
+ * Sets the visual grid color. Set with `!global` flag.
+ *
+ * @type Color
+ */
+/**
+ * Sets the `z-index` property of the visual grid. Can be `back` (behind content) or `front` (in front of content). Set with `!global` flag.
+ *
+ * @type String
+ */
+/**
+ * Sets the opacity property of the visual grid. Set with `!global` flag.
+ *
+ * @type Number (unitless)
+ */
+/**
+ * Disable all deprecation warnings. Defaults to `false`. Set with a `!global` flag.
+ *
+ * @type Bool
+ */
 button,
 input[type="submit"] {
   border: 1px solid #2459a6;
@@ -7,9 +105,9 @@ input[type="submit"] {
   display: inline-block;
   font-size: inherit;
   font-weight: bold;
-  background-color: #477dca;
-  background-image: -webkit-linear-gradient(#477dca, #2760b2);
-  background-image: linear-gradient(#477dca, #2760b2);
+  background-color: #477DCA;
+  background-image: -webkit-linear-gradient(#477DCA, #2760b2);
+  background-image: linear-gradient(#477DCA, #2760b2);
   padding: 7px 18px;
   text-decoration: none;
   text-shadow: 0 1px 0 #1b4f9a;
@@ -82,7 +180,7 @@ a {
     outline: none; }
 
 hr {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDD;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -93,7 +191,7 @@ img {
   max-width: 100%; }
 
 abbr, acronym {
-  border-bottom: 1px dotted #dddddd;
+  border-bottom: 1px dotted #DDD;
   cursor: help; }
 
 address {
@@ -107,7 +205,7 @@ del {
   color: #335462; }
 
 blockquote {
-  border-left: 2px solid #dddddd;
+  border-left: 2px solid #DDD;
   color: #335462;
   margin: 1.5em 0;
   padding-left: 0.75em; }
@@ -120,7 +218,7 @@ cite {
 
 fieldset {
   background: #f7f7f7;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
   margin: 0 0 0.75em 0;
   padding: 1.5em; }
 
@@ -150,7 +248,7 @@ select[multiple=multiple] {
   transition: border-color;
   background-color: white;
   border-radius: 0.1875em;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   font-family: "Open Sans", Helvetica, Roboto, Arial, sans-serif;
   font-size: 1em;
@@ -164,7 +262,7 @@ select[multiple=multiple] {
   textarea:focus,
   input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
   select[multiple=multiple]:focus {
-    border-color: #477dca;
+    border-color: #477DCA;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
     outline: none; }
 
@@ -215,7 +313,7 @@ th {
   text-align: left; }
 
 td {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDD;
   padding: 0.75em 0; }
 
 tr, td, th {
@@ -241,10 +339,6 @@ dl {
 
 article.type-system-serif {
   text-align: left; }
-  article.type-system-serif:after {
-    content: "";
-    display: table;
-    clear: both; }
   article.type-system-serif .type {
     border-bottom: 1px solid;
     font-family: "Merriweather Sans", sans-serif;
@@ -406,7 +500,7 @@ header.navigation {
       header.navigation ul li a:hover {
         color: rgba(60, 98, 115, 0.7); }
       header.navigation ul li a .red-text {
-        color: #da0000; }
+        color: #DA0000; }
   @media screen and (min-width: 53.75em) {
     header.navigation .sign-up {
       position: absolute;
@@ -419,7 +513,7 @@ header.navigation {
         -webkit-transition: all 0.2s ease-in-out;
         -moz-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
-        background: #477dca;
+        background: #477DCA;
         border-radius: 0.1875em;
         color: white;
         font-size: .8em;
@@ -524,7 +618,7 @@ header.navigation {
 
 .hero {
   background: url(http://mattcrum.github.io/tge/img/herocomp.png);
-  background-color: #00bef9;
+  background-color: #00BEF9;
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -558,9 +652,9 @@ header.navigation {
       font-size: inherit;
       font-weight: normal;
       line-height: 1;
-      background-color: #ffd100;
-      background-image: -webkit-linear-gradient(#ffd100, #ccc200);
-      background-image: linear-gradient(#ffd100, #ccc200);
+      background-color: #FFD100;
+      background-image: -webkit-linear-gradient(#FFD100, #ccc200);
+      background-image: linear-gradient(#FFD100, #ccc200);
       padding: 7px 18px;
       text-align: center;
       text-decoration: none;
@@ -672,7 +766,7 @@ header.navigation {
   transition: all 0.2s ease-in-out;
   background-color: #f7f7f7;
   border-radius: 0.1875em;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
   margin-bottom: 1.5em;
   cursor: pointer;
   box-shadow: 0 2px 4px #e6e6e6;
@@ -697,7 +791,7 @@ header.navigation {
       -webkit-transition: all 0.2s ease-in-out;
       -moz-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out;
-      background: #dbd199;
+      background: #DBD199;
       border-top-left-radius: 0.1875em;
       border-top-right-radius: 0.1875em; }
   .card .ribbon-wrapper {
@@ -721,7 +815,7 @@ header.navigation {
       left: -5px;
       top: 15px;
       width: 120px;
-      background-color: #477dca;
+      background-color: #477DCA;
       color: white;
       box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3); }
   .card .card-header {
@@ -729,7 +823,7 @@ header.navigation {
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     background-color: #f7f7f7;
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #DDD;
     border-radius: 0.1875em 0.1875em 0 0;
     font-weight: bold;
     padding: 0.5em 15px; }
@@ -777,7 +871,7 @@ header.navigation {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  height: 14em;
+  height: 2em;
   background: #6b83a6;
   width: 100%;
   overflow: hidden;
@@ -801,7 +895,7 @@ header.navigation {
       background-position: top;
       background-size: cover; }
   .grid-items .grid-item:nth-child(2) {
-    background-color: #3581a5;
+    background-color: #3581A5;
     box-shadow: inset 0px 0px 1px 2px #29637e; }
     .grid-items .grid-item:nth-child(2):hover {
       background-color: #29637e;
@@ -809,7 +903,7 @@ header.navigation {
       background-position: top;
       background-size: cover; }
   .grid-items .grid-item:nth-child(3) {
-    background-color: #5fbebe;
+    background-color: #5FBEBE;
     box-shadow: inset 0px 0px 1px 2px #44a6a6; }
     .grid-items .grid-item:nth-child(3):hover {
       background-color: #44a6a6;
@@ -817,7 +911,7 @@ header.navigation {
       background-position: top;
       background-size: cover; }
   .grid-items .grid-item:nth-child(4) {
-    background-color: #98c79a;
+    background-color: #98C79A;
     box-shadow: inset 0px 0px 1px 2px #77b57a; }
     .grid-items .grid-item:nth-child(4):hover {
       background-color: #77b57a;
@@ -825,7 +919,7 @@ header.navigation {
       background-position: top;
       background-size: cover; }
   .grid-items .grid-item:nth-child(5) {
-    background-color: #a7a891;
+    background-color: #A7A891;
     box-shadow: inset 0px 0px 1px 2px #909175; }
     .grid-items .grid-item:nth-child(5):hover {
       background-color: #909175;
@@ -833,7 +927,7 @@ header.navigation {
       background-position: top;
       background-size: cover; }
   .grid-items .grid-item:nth-child(6) {
-    background-color: #bdcc97;
+    background-color: #BDCC97;
     box-shadow: inset 0px 0px 1px 2px #a7bb75; }
     .grid-items .grid-item:nth-child(6):hover {
       background-color: #a7bb75;
@@ -841,7 +935,7 @@ header.navigation {
       background-position: top;
       background-size: cover; }
   .grid-items .grid-item:nth-child(7) {
-    background-color: #979ea0;
+    background-color: #979EA0;
     box-shadow: inset 0px 0px 1px 2px #7c8588; }
     .grid-items .grid-item:nth-child(7):hover {
       background-color: #7c8588;
@@ -877,7 +971,7 @@ header.navigation {
   background-size: cover; }
 
 .footer {
-  background: #00bef9;
+  background: #00BEF9;
   padding: 3em 30px;
   width: 100%; }
   .footer .footer-logo {
@@ -972,7 +1066,7 @@ header.navigation {
 
 body {
   font: 100% "Open Sans Light", Helvetica, sans-serif;
-  color: #333333;
+  color: #333;
   margin: 0; }
 
 .body-wrapper {
@@ -990,7 +1084,7 @@ body {
     clear: both; }
 
 .accordion-tabs-minimal {
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
   border-radius: 0.1875em;
   margin-bottom: 1.5em; }
   .accordion-tabs-minimal:after {
@@ -1016,8 +1110,8 @@ body {
         border-bottom-right-radius: 0; } }
   .accordion-tabs-minimal li.tab-header-and-content a.tab-link {
     background-color: white;
-    border-top: 1px solid #dddddd;
-    color: #333333;
+    border-top: 1px solid #DDD;
+    color: #333;
     display: block;
     font-weight: 400;
     padding: 0.75em 30px; }
@@ -1036,7 +1130,7 @@ body {
       @media screen and (min-width: 40em) {
         .accordion-tabs-minimal li.tab-header-and-content a.tab-link.is-active {
           background-color: white;
-          border: 1px solid #dddddd;
+          border: 1px solid #DDD;
           border-bottom: 1px solid white;
           margin-bottom: -1px; } }
   .accordion-tabs-minimal li.tab-header-and-content section {
@@ -1047,7 +1141,7 @@ body {
     width: 100%; }
     @media screen and (min-width: 40em) {
       .accordion-tabs-minimal li.tab-header-and-content section {
-        border-top: 1px solid #dddddd;
+        border-top: 1px solid #DDD;
         float: left;
         left: 0;
         padding: 0.75em 15px; }
